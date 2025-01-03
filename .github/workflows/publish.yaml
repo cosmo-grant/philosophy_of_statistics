@@ -21,7 +21,7 @@ jobs:
       - name: setup pages
         uses: actions/configure-pages@v5
       - name: build with asciidoctor
-        run: asciidoctor -D public test.adoc
+        run: asciidoctor -D public -o index.html test.adoc
       - name: upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
